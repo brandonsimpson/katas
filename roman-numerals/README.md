@@ -33,3 +33,17 @@ The change from the Arabic numbering system to using Roman numerals has gone rea
     IX 			9
     MLXVI 		1066
     MCMLXXXIX 	1989
+
+
+----------
+
+## Making the Test Suite Pass
+
+1. Get [PHPUnit].
+
+        % wget --no-check-certificate https://phar.phpunit.de/phpunit.phar
+        % chmod +x phpunit.phar
+
+2. Execute the tests for an assignment.
+
+        % phpunit.phar roman-numerals/roman-numerals_test.php
