@@ -27,6 +27,17 @@ class Convert
     
     public function RomanToArabic($input) {
         
-        return null;
+        $result = 0;
+        
+        foreach ($this->roman as $r => $val) {
+            
+            // if roman value found in input string, add numeric equivalent and remove that part of the string
+            while (strpos($input, $r) === 0) {
+                $result+= $val;
+                $input = substr($input, strlen($r));
+            }
+        }
+        
+        return $result;
     }
 }
