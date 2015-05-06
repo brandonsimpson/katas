@@ -3,8 +3,27 @@ class Convert
 {
     
     // roman numeral => numeric equivalents
-    private $roman = ['M' => 1000, 'CM' => 900, 'D' => 500, 'CD' => 400, 'C' => 100, 'XC' => 90, 'L' => 50, 'XL' => 40, 'X' => 10, 'IX' => 9, 'V' => 5, 'IV' => 4, 'I' => 1];
+    private $roman = [
+        'M' => 1000, 
+        'CM' => 900, 
+        'D' => 500, 
+        'CD' => 400, 
+        'C' => 100, 
+        'XC' => 90, 
+        'L' => 50, 
+        'XL' => 40, 
+        'X' => 10, 
+        'IX' => 9, 
+        'V' => 5, 
+        'IV' => 4, 
+        'I' => 1
+    ];
     
+    /**
+     * ArabicToRoman - Convert Arabic Number to Roman Numeral
+     * @param [int] $input - Arabic / Numerical input to convert to Roman Numeral equivalent
+     * @return [string] Roman Numeral value
+     */
     public function ArabicToRoman($input) {
         
         $num = $input;
@@ -25,6 +44,11 @@ class Convert
         return $result;
     }
     
+    /**
+     * RomanToArabic - Convert Roman Numeral to Arabic Number
+     * @param [string] $input - Roman Numeral input string to conver to numeric equivalent
+     * @return [int] Numeric value
+     */
     public function RomanToArabic($input) {
         
         $result = 0;
